@@ -20,16 +20,46 @@ The RDP Agent:
 ### Prerequisites
 
 - Python 3.10+
+- Flask (for the Web UI): `pip install flask`
 - (Optional) PyYAML for YAML config support: `pip install pyyaml`
 - (Optional) pytest for running tests: `pip install pytest`
 
-### Run with Sample Data
+Install all dependencies at once:
+
+```bash
+pip install flask pyyaml pytest
+```
+
+### Option 1 — Web UI (Recommended)
+
+Start the Flask development server:
+
+```bash
+python app.py
+```
+
+Then open your browser and navigate to:
+
+```
+http://localhost:5000
+```
+
+From the web interface you can:
+
+1. **Drag & drop** (or browse) a `.json` quality report file
+2. Click **Generate Refactoring Plan**
+3. View the plan summary and individual refactoring steps
+4. **Copy** the JSON to clipboard or **Download** it as a file
+
+### Option 2 — Command Line
+
+#### Run with Sample Data
 
 ```bash
 python rdp_agent.py --input quality_report.json --output refactoring_plan.json
 ```
 
-### Run with Custom Config
+#### Run with Custom Config
 
 ```bash
 python rdp_agent.py --input quality_report.json --output plan.json --config config.yaml
@@ -44,10 +74,15 @@ pytest test_rdp_agent.py -v
 ## Project Structure
 
 ```
+├── app.py                 # Flask web server (Web UI entry point)
 ├── rdp_agent.py           # Main agent (all core logic)
 ├── quality_report.json    # Sample input from Code Understanding Agent
 ├── config.yaml            # Configurable weights, thresholds, log level
 ├── test_rdp_agent.py      # pytest test suite
+├── templates/
+│   └── index.html         # Web UI template (upload form & results)
+├── static/
+│   └── style.css          # Web UI styles (dark theme)
 └── README.md              # This file
 ```
 
