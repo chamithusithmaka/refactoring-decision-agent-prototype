@@ -1,0 +1,113 @@
+{
+  "plan_id": "plan_20260226_140808",
+  "target": "OrderProcessor.java",
+  "steps": [
+    {
+      "step_id": 1,
+      "smell_id": "smell_001",
+      "refactoring": "Extract Method",
+      "target": {
+        "class": "OrderProcessor",
+        "method": "calculateTotal"
+      },
+      "parameters": {
+        "source_lines": [
+          10,
+          160
+        ],
+        "new_method_name": "extracted_calculateTotal"
+      },
+      "explanation": "Extract Method on OrderProcessor.calculateTotal to address Long Method smell. Expected high impact with low risk and low complexity. Metrics: 150 lines of code, cyclomatic complexity 30, lines 10-160."
+    },
+    {
+      "step_id": 2,
+      "smell_id": "smell_002",
+      "refactoring": "Extract Class",
+      "target": {
+        "class": "OrderProcessor",
+        "method": null
+      },
+      "parameters": {
+        "source_class": "OrderProcessor",
+        "new_class_name": "OrderProcessorHelper"
+      },
+      "explanation": "Extract Class on OrderProcessor to address God Class smell. Expected high impact with medium risk and high complexity. Metrics: 850 lines of code, 25 methods, lines 1-850."
+    },
+    {
+      "step_id": 3,
+      "smell_id": "smell_006",
+      "refactoring": "Move Method",
+      "target": {
+        "class": "OrderProcessor",
+        "method": "updateInventory"
+      },
+      "parameters": {
+        "source_class": "OrderProcessor",
+        "method": "updateInventory",
+        "destination_class": "<inferred_target_class>"
+      },
+      "explanation": "Move Method on OrderProcessor.updateInventory to address Shotgun Surgery smell. Expected high impact with medium risk and medium complexity. Metrics: 30 lines of code, lines 500-530."
+    },
+    {
+      "step_id": 4,
+      "smell_id": "smell_007",
+      "refactoring": "Replace Conditional with Polymorphism",
+      "target": {
+        "class": "OrderProcessor",
+        "method": "processPayment"
+      },
+      "parameters": {
+        "source_class": "OrderProcessor",
+        "method": "processPayment"
+      },
+      "explanation": "Replace Conditional with Polymorphism on OrderProcessor.processPayment to address Switch Statements smell. Expected high impact with medium risk and high complexity. Metrics: 80 lines of code, cyclomatic complexity 12, lines 600-680."
+    },
+    {
+      "step_id": 5,
+      "smell_id": "smell_003",
+      "refactoring": "Move Method",
+      "target": {
+        "class": "OrderProcessor",
+        "method": "applyDiscount"
+      },
+      "parameters": {
+        "source_class": "OrderProcessor",
+        "method": "applyDiscount",
+        "destination_class": "Customer"
+      },
+      "explanation": "Move Method on OrderProcessor.applyDiscount to address Feature Envy smell. Expected high impact with medium risk and low complexity. Metrics: 40 lines of code, lines 200-240."
+    },
+    {
+      "step_id": 6,
+      "smell_id": "smell_004",
+      "refactoring": "Extract Method",
+      "target": {
+        "class": "OrderProcessor",
+        "method": "validateOrder"
+      },
+      "parameters": {
+        "source_lines": [
+          300,
+          340
+        ],
+        "new_method_name": "extracted_validateOrder"
+      },
+      "explanation": "Extract Method on OrderProcessor.validateOrder to address Duplicate Code smell. Expected high impact with low risk and low complexity. Metrics: 40 lines of code, lines 300-340."
+    },
+    {
+      "step_id": 7,
+      "smell_id": "smell_005",
+      "refactoring": "Introduce Parameter Object",
+      "target": {
+        "class": "OrderProcessor",
+        "method": "createShipment"
+      },
+      "parameters": {
+        "method": "createShipment",
+        "parameter_object_name": "createShipmentParams"
+      },
+      "explanation": "Introduce Parameter Object on OrderProcessor.createShipment to address Data Clumps smell. Expected medium impact with low risk and medium complexity. Metrics: 30 lines of code, lines 400-430."
+    }
+  ],
+  "summary": "7-step plan addressing 7 of 7 detected smells in OrderProcessor.java. Refactorings applied: Extract Method, Extract Class, Move Method, Replace Conditional with Polymorphism, Introduce Parameter Object."
+}
