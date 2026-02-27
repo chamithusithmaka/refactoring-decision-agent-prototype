@@ -1,0 +1,156 @@
+{
+    "target": "UserService.java",
+    "smells": [
+        {
+            "id": "smell_101",
+            "type": "Long Parameter List",
+            "location": {
+                "class": "UserService",
+                "method": "registerUser",
+                "lines": [
+                    25,
+                    80
+                ]
+            },
+            "metrics": {
+                "parameter_count": 8,
+                "lines_of_code": 55,
+                "cyclomatic_complexity": 6
+            },
+            "severity": "high"
+        },
+        {
+            "id": "smell_102",
+            "type": "Primitive Obsession",
+            "location": {
+                "class": "UserService",
+                "method": "validateAddress",
+                "lines": [
+                    90,
+                    140
+                ]
+            },
+            "metrics": {
+                "primitive_field_count": 6,
+                "lines_of_code": 50,
+                "parameter_count": 5
+            },
+            "severity": "medium"
+        },
+        {
+            "id": "smell_103",
+            "type": "Duplicate Code",
+            "location": {
+                "class": "UserService",
+                "method": "sendNotification",
+                "lines": [
+                    150,
+                    200
+                ],
+                "parent_class": "BaseService"
+            },
+            "metrics": {
+                "lines_of_code": 50,
+                "duplicate_blocks": 4
+            },
+            "severity": "high"
+        },
+        {
+            "id": "smell_104",
+            "type": "Message Chains",
+            "location": {
+                "class": "UserService",
+                "method": "getUserProfile",
+                "lines": [
+                    210,
+                    240
+                ]
+            },
+            "metrics": {
+                "chain_length": 5,
+                "lines_of_code": 30
+            },
+            "severity": "low"
+        },
+        {
+            "id": "smell_105",
+            "type": "Lazy Class",
+            "location": {
+                "class": "UserDTO",
+                "method": null,
+                "lines": [
+                    1,
+                    20
+                ],
+                "parent_class": "BaseDTO"
+            },
+            "metrics": {
+                "lines_of_code": 20,
+                "method_count": 2,
+                "field_count": 3
+            },
+            "severity": "low"
+        },
+        {
+            "id": "smell_106",
+            "type": "Shotgun Surgery",
+            "location": {
+                "class": "UserService",
+                "method": "updateEmail",
+                "lines": [
+                    250,
+                    290
+                ]
+            },
+            "metrics": {
+                "lines_of_code": 40,
+                "affected_classes": 9,
+                "external_field_accesses": 6
+            },
+            "severity": "critical"
+        },
+        {
+            "id": "smell_107",
+            "type": "Speculative Generality",
+            "location": {
+                "class": "AbstractUserHandler",
+                "method": "handleRequest",
+                "lines": [
+                    1,
+                    30
+                ],
+                "parent_class": "BaseHandler"
+            },
+            "metrics": {
+                "lines_of_code": 30,
+                "subclass_count": 1
+            },
+            "severity": "low"
+        },
+        {
+            "id": "smell_108",
+            "type": "Long Method",
+            "location": {
+                "class": "UserService",
+                "method": "processImport",
+                "lines": [
+                    300,
+                    520
+                ]
+            },
+            "metrics": {
+                "lines_of_code": 220,
+                "cyclomatic_complexity": 35,
+                "parameter_count": 4
+            },
+            "severity": "critical"
+        }
+    ],
+    "metrics_summary": {
+        "total_lines": 620,
+        "total_methods": 14,
+        "total_fields": 12,
+        "average_cyclomatic_complexity": 10.2,
+        "maintainability_index": 28
+    }
+}
