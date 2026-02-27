@@ -1,0 +1,135 @@
+{
+    "target": "OrderProcessor.java",
+    "smells": [
+        {
+            "id": "smell_001",
+            "type": "Long Method",
+            "location": {
+                "class": "OrderProcessor",
+                "method": "calculateTotal",
+                "lines": [
+                    10,
+                    160
+                ]
+            },
+            "metrics": {
+                "lines_of_code": 150,
+                "cyclomatic_complexity": 30
+            },
+            "severity": "high"
+        },
+        {
+            "id": "smell_002",
+            "type": "God Class",
+            "location": {
+                "class": "OrderProcessor",
+                "method": null,
+                "lines": [
+                    1,
+                    850
+                ]
+            },
+            "metrics": {
+                "lines_of_code": 850,
+                "method_count": 25,
+                "field_count": 18
+            },
+            "severity": "critical"
+        },
+        {
+            "id": "smell_003",
+            "type": "Feature Envy",
+            "location": {
+                "class": "OrderProcessor",
+                "method": "applyDiscount",
+                "lines": [
+                    200,
+                    240
+                ]
+            },
+            "metrics": {
+                "external_field_accesses": 8,
+                "lines_of_code": 40
+            },
+            "severity": "medium",
+            "details": "Customer"
+        },
+        {
+            "id": "smell_004",
+            "type": "Duplicate Code",
+            "location": {
+                "class": "OrderProcessor",
+                "method": "validateOrder",
+                "lines": [
+                    300,
+                    340
+                ]
+            },
+            "metrics": {
+                "lines_of_code": 40,
+                "duplicate_blocks": 3
+            },
+            "severity": "medium"
+        },
+        {
+            "id": "smell_005",
+            "type": "Data Clumps",
+            "location": {
+                "class": "OrderProcessor",
+                "method": "createShipment",
+                "lines": [
+                    400,
+                    430
+                ]
+            },
+            "metrics": {
+                "parameter_count": 6,
+                "lines_of_code": 30
+            },
+            "severity": "low"
+        },
+        {
+            "id": "smell_006",
+            "type": "Shotgun Surgery",
+            "location": {
+                "class": "OrderProcessor",
+                "method": "updateInventory",
+                "lines": [
+                    500,
+                    530
+                ]
+            },
+            "metrics": {
+                "lines_of_code": 30,
+                "affected_classes": 7,
+                "external_field_accesses": 5
+            },
+            "severity": "high"
+        },
+        {
+            "id": "smell_007",
+            "type": "Switch Statements",
+            "location": {
+                "class": "OrderProcessor",
+                "method": "processPayment",
+                "lines": [
+                    600,
+                    680
+                ]
+            },
+            "metrics": {
+                "lines_of_code": 80,
+                "cyclomatic_complexity": 12,
+                "switch_branches": 6
+            },
+            "severity": "high"
+        }
+    ],
+    "metrics_summary": {
+        "total_lines": 850,
+        "total_methods": 25,
+        "total_fields": 18,
+        "average_cyclomatic_complexity": 8.5,
+        "maintainability_index": 35
+    }
+}
