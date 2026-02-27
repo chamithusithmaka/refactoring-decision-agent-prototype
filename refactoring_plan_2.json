@@ -1,0 +1,123 @@
+{
+  "plan_id": "plan_20260226_141856",
+  "target": "UserService.java",
+  "steps": [
+    {
+      "step_id": 1,
+      "smell_id": "smell_108",
+      "refactoring": "Extract Method",
+      "target": {
+        "class": "UserService",
+        "method": "processImport"
+      },
+      "parameters": {
+        "source_lines": [
+          300,
+          520
+        ],
+        "new_method_name": "extracted_processImport"
+      },
+      "explanation": "Extract Method on UserService.processImport to address Long Method smell. Expected high impact with low risk and low complexity. Metrics: 220 lines of code, cyclomatic complexity 35, lines 300-520."
+    },
+    {
+      "step_id": 2,
+      "smell_id": "smell_106",
+      "refactoring": "Move Method",
+      "target": {
+        "class": "UserService",
+        "method": "updateEmail"
+      },
+      "parameters": {
+        "source_class": "UserService",
+        "method": "updateEmail",
+        "destination_class": "<inferred_target_class>"
+      },
+      "explanation": "Move Method on UserService.updateEmail to address Shotgun Surgery smell. Expected high impact with medium risk and medium complexity. Metrics: 40 lines of code, lines 250-290."
+    },
+    {
+      "step_id": 3,
+      "smell_id": "smell_101",
+      "refactoring": "Introduce Parameter Object",
+      "target": {
+        "class": "UserService",
+        "method": "registerUser"
+      },
+      "parameters": {
+        "method": "registerUser",
+        "parameter_object_name": "registerUserParams"
+      },
+      "explanation": "Introduce Parameter Object on UserService.registerUser to address Long Parameter List smell. Expected high impact with low risk and medium complexity. Metrics: 55 lines of code, cyclomatic complexity 6, lines 25-80."
+    },
+    {
+      "step_id": 4,
+      "smell_id": "smell_103",
+      "refactoring": "Extract Method",
+      "target": {
+        "class": "UserService",
+        "method": "sendNotification"
+      },
+      "parameters": {
+        "source_lines": [
+          150,
+          200
+        ],
+        "new_method_name": "extracted_sendNotification"
+      },
+      "explanation": "Extract Method on UserService.sendNotification to address Duplicate Code smell. Expected high impact with low risk and low complexity. Metrics: 50 lines of code, lines 150-200."
+    },
+    {
+      "step_id": 5,
+      "smell_id": "smell_102",
+      "refactoring": "Replace Data Value with Object",
+      "target": {
+        "class": "UserService",
+        "method": "validateAddress"
+      },
+      "parameters": {
+        "source_class": "UserService"
+      },
+      "explanation": "Replace Data Value with Object on UserService.validateAddress to address Primitive Obsession smell. Expected medium impact with low risk and medium complexity. Metrics: 50 lines of code, lines 90-140."
+    },
+    {
+      "step_id": 6,
+      "smell_id": "smell_104",
+      "refactoring": "Hide Delegate",
+      "target": {
+        "class": "UserService",
+        "method": "getUserProfile"
+      },
+      "parameters": {
+        "source_class": "UserService"
+      },
+      "explanation": "Hide Delegate on UserService.getUserProfile to address Message Chains smell. Expected medium impact with low risk and low complexity. Metrics: 30 lines of code, lines 210-240."
+    },
+    {
+      "step_id": 7,
+      "smell_id": "smell_105",
+      "refactoring": "Inline Class",
+      "target": {
+        "class": "UserDTO",
+        "method": null
+      },
+      "parameters": {
+        "class_to_inline": "UserDTO"
+      },
+      "explanation": "Inline Class on UserDTO to address Lazy Class smell. Expected medium impact with low risk and low complexity. Metrics: 20 lines of code, 2 methods, lines 1-20."
+    },
+    {
+      "step_id": 8,
+      "smell_id": "smell_107",
+      "refactoring": "Collapse Hierarchy",
+      "target": {
+        "class": "AbstractUserHandler",
+        "method": "handleRequest"
+      },
+      "parameters": {
+        "source_class": "AbstractUserHandler",
+        "parent_class": "BaseHandler"
+      },
+      "explanation": "Collapse Hierarchy on AbstractUserHandler.handleRequest to address Speculative Generality smell. Expected medium impact with low risk and medium complexity. Metrics: 30 lines of code, lines 1-30."
+    }
+  ],
+  "summary": "8-step plan addressing 8 of 8 detected smells in UserService.java. Refactorings applied: Extract Method, Move Method, Introduce Parameter Object, Replace Data Value with Object, Hide Delegate, Inline Class, Collapse Hierarchy."
+}
