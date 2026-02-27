@@ -1,0 +1,140 @@
+{
+    "target": "UserManagement.java",
+    "smells": [
+        {
+            "id": "smell_001",
+            "type": "Shotgun Surgery",
+            "location": {
+                "class": "UserManagement",
+                "method": "updateUserEmail",
+                "lines": [
+                    45,
+                    70
+                ]
+            },
+            "metrics": {
+                "lines_of_code": 25,
+                "affected_classes": 4,
+                "external_field_accesses": 3
+            },
+            "severity": "medium"
+        },
+        {
+            "id": "smell_002",
+            "type": "Shotgun Surgery",
+            "location": {
+                "class": "UserManagement",
+                "method": "deactivateUser",
+                "lines": [
+                    120,
+                    155
+                ]
+            },
+            "metrics": {
+                "lines_of_code": 35,
+                "affected_classes": 5,
+                "external_field_accesses": 4
+            },
+            "severity": "medium"
+        },
+        {
+            "id": "smell_003",
+            "type": "Shotgun Surgery",
+            "location": {
+                "class": "UserManagement",
+                "method": "changeUserRole",
+                "lines": [
+                    210,
+                    240
+                ]
+            },
+            "metrics": {
+                "lines_of_code": 30,
+                "affected_classes": 4,
+                "external_field_accesses": 3
+            },
+            "severity": "low"
+        },
+        {
+            "id": "smell_004",
+            "type": "Shotgun Surgery",
+            "location": {
+                "class": "UserManagement",
+                "method": "resetUserPassword",
+                "lines": [
+                    310,
+                    345
+                ]
+            },
+            "metrics": {
+                "lines_of_code": 35,
+                "affected_classes": 5,
+                "external_field_accesses": 4
+            },
+            "severity": "medium"
+        },
+        {
+            "id": "smell_005",
+            "type": "Shotgun Surgery",
+            "location": {
+                "class": "UserManagement",
+                "method": "updateUserProfile",
+                "lines": [
+                    420,
+                    450
+                ]
+            },
+            "metrics": {
+                "lines_of_code": 30,
+                "affected_classes": 3,
+                "external_field_accesses": 3
+            },
+            "severity": "low"
+        },
+        {
+            "id": "smell_006",
+            "type": "Shotgun Surgery",
+            "location": {
+                "class": "UserManagement",
+                "method": "suspendUser",
+                "lines": [
+                    530,
+                    565
+                ]
+            },
+            "metrics": {
+                "lines_of_code": 35,
+                "affected_classes": 6,
+                "external_field_accesses": 5
+            },
+            "severity": "medium"
+        },
+        {
+            "id": "smell_007",
+            "type": "Shotgun Surgery",
+            "location": {
+                "class": "UserManagement",
+                "method": "transferUserData",
+                "lines": [
+                    650,
+                    680
+                ]
+            },
+            "metrics": {
+                "lines_of_code": 30,
+                "affected_classes": 4,
+                "external_field_accesses": 3
+            },
+            "severity": "low"
+        }
+    ],
+    "metrics_summary": {
+        "total_lines": 850,
+        "total_methods": 22,
+        "total_fields": 14,
+        "average_cyclomatic_complexity": 5.4,
+        "maintainability_index": 62,
+        "total_affected_classes": 8,
+        "shotgun_surgery_hotspots": 7
+    }
+}
